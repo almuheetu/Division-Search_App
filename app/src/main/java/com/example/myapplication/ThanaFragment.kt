@@ -29,13 +29,8 @@ class ThanaFragment : Fragment(), ThanaAdapter.OnItemClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val district = args.data
-        val thanaLists = ArrayList<Thana>()
-
-        for (item in thanaList) {
-            if (item.districtName == district.districtName) {
-                thanaLists.add(item)
-            }
-        }
+        val thanaLists =
+            thanaList.filter { it.districtName == district.districtName } as ArrayList<Thana>
         val recyclerView: RecyclerView = binding.thanaRecyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         thanaAdapter = ThanaAdapter(thanaLists, this)

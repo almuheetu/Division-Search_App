@@ -26,13 +26,7 @@ class PostFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val thana = args.data
-        val postLists = ArrayList<Post>()
-        for (item in postList) {
-            if (item.thanaName == thana.thanaName) {
-                postLists.add(item)
-            }
-        }
-
+        val postLists = postList.filter { it.thanaName == thana.thanaName } as ArrayList<Post>
         val recyclerView: RecyclerView = binding.postRecyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         postAdapter = PostAdapter(postLists)
