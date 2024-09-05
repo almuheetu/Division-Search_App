@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.myapplication.databinding.FragmentDistrictListBinding
 
 
-
 class DistrictFragment : Fragment(), DistrictAdapter.OnItemClickListener {
     private lateinit var binding: FragmentDistrictListBinding
     private lateinit var districtAdapter: DistrictAdapter
@@ -29,13 +28,13 @@ class DistrictFragment : Fragment(), DistrictAdapter.OnItemClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val division = args.data
-        val districts = ArrayList<District>()
+        val districts = districtList.filter { it.divisionName == division.divisionName } as ArrayList<District>
 
-        for (item in districtList) {
-            if(item.divisionName == division.divisionName){
-                districts.add(item)
-            }
-        }
+//        for (item in districtList) {
+//            if (item.divisionName == division.divisionName) {
+//                districts.add(item)
+//            }
+//        }
 
         val recyclerView: RecyclerView = binding.districtRecyclerView
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)

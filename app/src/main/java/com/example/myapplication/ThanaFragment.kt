@@ -30,6 +30,7 @@ class ThanaFragment : Fragment(), ThanaAdapter.OnItemClickListener {
         super.onViewCreated(view, savedInstanceState)
         val district = args.data
         val thanaLists = ArrayList<Thana>()
+
         for (item in thanaList) {
             if (item.districtName == district.districtName) {
                 thanaLists.add(item)

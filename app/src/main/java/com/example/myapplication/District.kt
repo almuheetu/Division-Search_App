@@ -6,4 +6,4 @@ data class District(
     val divisionName: String,
     val districtName: String,
     val districtImage: String
-): Serializable
+) : Serializable
