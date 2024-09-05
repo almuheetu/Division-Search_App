@@ -10,7 +10,8 @@ import com.example.myapplication.placeholder.PlaceholderContent.PlaceholderItem
 import com.example.myapplication.databinding.AdapterThanaBinding
 
 class ThanaAdapter(
-    private val thanaList: ArrayList<Thana>
+    private val thanaList: ArrayList<Thana>,
+    private val listener: OnItemClickListener
 ) : RecyclerView.Adapter<ThanaAdapter.ViewHolder>() {
     class ViewHolder(val binding: AdapterThanaBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -32,6 +33,9 @@ class ThanaAdapter(
     override fun getItemCount(): Int {
         return thanaList.size
 
+    }
+    interface OnItemClickListener {
+        fun onItemClick(thana: Thana)
     }
 
 }

@@ -235,3 +235,293 @@ val thanaList = arrayListOf(
     Thana(districtName = "Netrokona", thanaName = "Barhatta")
 
 )
+
+val postList = arrayListOf(
+    Post(thanaName = "Mohammadpur", postName = "Mohammadpur Post Office"),
+    Post(thanaName = "Mohammadpur", postName = "Alambagh Post Office"),
+    Post(thanaName = "Mohammadpur", postName = "Shyamoli Post Office"),
+
+    Post(thanaName = "Uttara", postName = "Uttara Post Office"),
+    Post(thanaName = "Uttara", postName = "Uttara Central Post Office"),
+    Post(thanaName = "Uttara", postName = "Uttara Sector 4 Post Office"),
+
+    Post(thanaName = "Ramna", postName = "Ramna Post Office"),
+    Post(thanaName = "Ramna", postName = "Bijoynagar Post Office"),
+    Post(thanaName = "Ramna", postName = "Narayanganj Post Office"),
+
+    Post(thanaName = "Narayanganj Sadar", postName = "Narayanganj Sadar Post Office"),
+    Post(thanaName = "Narayanganj Sadar", postName = "Narayanganj Post Office"),
+    Post(thanaName = "Narayanganj Sadar", postName = "Chashara Post Office"),
+
+    Post(thanaName = "Fatulla", postName = "Fatulla Post Office"),
+    Post(thanaName = "Fatulla", postName = "Fatulla Model Post Office"),
+    Post(thanaName = "Fatulla", postName = "Fatulla Railway Post Office"),
+
+    Post(thanaName = "Sinamangal", postName = "Sinamangal Post Office"),
+    Post(thanaName = "Sinamangal", postName = "Sinamangal Central Post Office"),
+    Post(thanaName = "Sinamangal", postName = "Sinamangal Model Post Office"),
+
+    Post(thanaName = "Gazipur Sadar", postName = "Gazipur Sadar Post Office"),
+    Post(thanaName = "Gazipur Sadar", postName = "Gazipur Post Office"),
+    Post(thanaName = "Gazipur Sadar", postName = "Gazipur Central Post Office"),
+
+    Post(thanaName = "Kaliakior", postName = "Kaliakior Post Office"),
+    Post(thanaName = "Kaliakior", postName = "Kaliakior Model Post Office"),
+    Post(thanaName = "Kaliakior", postName = "Kaliakior Railway Post Office"),
+
+    Post(thanaName = "Tongi", postName = "Tongi Post Office"),
+    Post(thanaName = "Tongi", postName = "Tongi Central Post Office"),
+    Post(thanaName = "Tongi", postName = "Tongi Model Post Office"),
+
+    Post(thanaName = "Cumilla Sadar", postName = "Cumilla Sadar Post Office"),
+    Post(thanaName = "Cumilla Sadar", postName = "Cumilla Post Office"),
+    Post(thanaName = "Cumilla Sadar", postName = "Cumilla Railway Post Office"),
+
+    Post(thanaName = "Brahmanpara", postName = "Brahmanpara Post Office"),
+    Post(thanaName = "Brahmanpara", postName = "Brahmanpara Model Post Office"),
+    Post(thanaName = "Brahmanpara", postName = "Brahmanpara Central Post Office"),
+
+    Post(thanaName = "Debidwar", postName = "Debidwar Post Office"),
+    Post(thanaName = "Debidwar", postName = "Debidwar Model Post Office"),
+    Post(thanaName = "Debidwar", postName = "Debidwar Railway Post Office"),
+
+    Post(thanaName = "Feni Sadar", postName = "Feni Sadar Post Office"),
+    Post(thanaName = "Feni Sadar", postName = "Feni Post Office"),
+    Post(thanaName = "Feni Sadar", postName = "Feni Railway Post Office"),
+
+    Post(thanaName = "Daganbhuiyan", postName = "Daganbhuiyan Post Office"),
+    Post(thanaName = "Daganbhuiyan", postName = "Daganbhuiyan Model Post Office"),
+    Post(thanaName = "Daganbhuiyan", postName = "Daganbhuiyan Railway Post Office"),
+
+    Post(thanaName = "Fulgazi", postName = "Fulgazi Post Office"),
+    Post(thanaName = "Fulgazi", postName = "Fulgazi Model Post Office"),
+    Post(thanaName = "Fulgazi", postName = "Fulgazi Central Post Office"),
+
+    Post(thanaName = "Brahmanbaria Sadar", postName = "Brahmanbaria Sadar Post Office"),
+    Post(thanaName = "Brahmanbaria Sadar", postName = "Brahmanbaria Post Office"),
+    Post(thanaName = "Brahmanbaria Sadar", postName = "Brahmanbaria Railway Post Office"),
+
+    Post(thanaName = "Bijoynagar", postName = "Bijoynagar Post Office"),
+    Post(thanaName = "Bijoynagar", postName = "Bijoynagar Model Post Office"),
+    Post(thanaName = "Bijoynagar", postName = "Bijoynagar Central Post Office"),
+
+    Post(thanaName = "Nabinagar", postName = "Nabinagar Post Office"),
+    Post(thanaName = "Nabinagar", postName = "Nabinagar Model Post Office"),
+    Post(thanaName = "Nabinagar", postName = "Nabinagar Railway Post Office"),
+
+    Post(thanaName = "Natore Sadar", postName = "Natore Sadar Post Office"),
+    Post(thanaName = "Natore Sadar", postName = "Natore Post Office"),
+    Post(thanaName = "Natore Sadar", postName = "Natore Railway Post Office"),
+
+    Post(thanaName = "Bagatipara", postName = "Bagatipara Post Office"),
+    Post(thanaName = "Bagatipara", postName = "Bagatipara Model Post Office"),
+    Post(thanaName = "Bagatipara", postName = "Bagatipara Central Post Office"),
+
+    Post(thanaName = "Lalpur", postName = "Lalpur Post Office"),
+    Post(thanaName = "Lalpur", postName = "Lalpur Model Post Office"),
+    Post(thanaName = "Lalpur", postName = "Lalpur Railway Post Office"),
+
+    Post(thanaName = "Bogura Sadar", postName = "Bogura Sadar Post Office"),
+    Post(thanaName = "Bogura Sadar", postName = "Bogura Post Office"),
+    Post(thanaName = "Bogura Sadar", postName = "Bogura Railway Post Office"),
+
+    Post(thanaName = "Kahaloo", postName = "Kahaloo Post Office"),
+    Post(thanaName = "Kahaloo", postName = "Kahaloo Model Post Office"),
+    Post(thanaName = "Kahaloo", postName = "Kahaloo Central Post Office"),
+
+    Post(thanaName = "Sherpur", postName = "Sherpur Post Office"),
+    Post(thanaName = "Sherpur", postName = "Sherpur Model Post Office"),
+    Post(thanaName = "Sherpur", postName = "Sherpur Central Post Office"),
+
+    Post(thanaName = "Naogaon Sadar", postName = "Naogaon Sadar Post Office"),
+    Post(thanaName = "Naogaon Sadar", postName = "Naogaon Post Office"),
+    Post(thanaName = "Naogaon Sadar", postName = "Naogaon Railway Post Office"),
+
+    Post(thanaName = "Porsha", postName = "Porsha Post Office"),
+    Post(thanaName = "Porsha", postName = "Porsha Model Post Office"),
+    Post(thanaName = "Porsha", postName = "Porsha Central Post Office"),
+
+    Post(thanaName = "Mohadevpur", postName = "Mohadevpur Post Office"),
+    Post(thanaName = "Mohadevpur", postName = "Mohadevpur Model Post Office"),
+    Post(thanaName = "Mohadevpur", postName = "Mohadevpur Railway Post Office"),
+
+    Post(thanaName = "Bagerhat Sadar", postName = "Bagerhat Sadar Post Office"),
+    Post(thanaName = "Bagerhat Sadar", postName = "Bagerhat Post Office"),
+    Post(thanaName = "Bagerhat Sadar", postName = "Bagerhat Railway Post Office"),
+
+    Post(thanaName = "Mollahat", postName = "Mollahat Post Office"),
+    Post(thanaName = "Mollahat", postName = "Mollahat Model Post Office"),
+    Post(thanaName = "Mollahat", postName = "Mollahat Central Post Office"),
+
+    Post(thanaName = "Chitalmari", postName = "Chitalmari Post Office"),
+    Post(thanaName = "Chitalmari", postName = "Chitalmari Model Post Office"),
+    Post(thanaName = "Chitalmari", postName = "Chitalmari Central Post Office"),
+
+    Post(thanaName = "Chuadanga Sadar", postName = "Chuadanga Sadar Post Office"),
+    Post(thanaName = "Chuadanga Sadar", postName = "Chuadanga Post Office"),
+    Post(thanaName = "Chuadanga Sadar", postName = "Chuadanga Railway Post Office"),
+
+    Post(thanaName = "Damurhuda", postName = "Damurhuda Post Office"),
+    Post(thanaName = "Damurhuda", postName = "Damurhuda Model Post Office"),
+    Post(thanaName = "Damurhuda", postName = "Damurhuda Central Post Office"),
+
+    Post(thanaName = "Jibonnagar", postName = "Jibonnagar Post Office"),
+    Post(thanaName = "Jibonnagar", postName = "Jibonnagar Model Post Office"),
+    Post(thanaName = "Jibonnagar", postName = "Jibonnagar Central Post Office"),
+
+    Post(thanaName = "Jessore Sadar", postName = "Jessore Sadar Post Office"),
+    Post(thanaName = "Jessore Sadar", postName = "Jessore Post Office"),
+    Post(thanaName = "Jessore Sadar", postName = "Jessore Railway Post Office"),
+
+    Post(thanaName = "Abhaynagar", postName = "Abhaynagar Post Office"),
+    Post(thanaName = "Abhaynagar", postName = "Abhaynagar Model Post Office"),
+    Post(thanaName = "Abhaynagar", postName = "Abhaynagar Central Post Office"),
+
+    Post(thanaName = "Keshabpur", postName = "Keshabpur Post Office"),
+    Post(thanaName = "Keshabpur", postName = "Keshabpur Model Post Office"),
+    Post(thanaName = "Keshabpur", postName = "Keshabpur Central Post Office"),
+
+    Post(thanaName = "Barguna Sadar", postName = "Barguna Sadar Post Office"),
+    Post(thanaName = "Barguna Sadar", postName = "Barguna Post Office"),
+    Post(thanaName = "Barguna Sadar", postName = "Barguna Railway Post Office"),
+
+    Post(thanaName = "Amtali", postName = "Amtali Post Office"),
+    Post(thanaName = "Amtali", postName = "Amtali Model Post Office"),
+    Post(thanaName = "Amtali", postName = "Amtali Central Post Office"),
+
+    Post(thanaName = "Patharghata", postName = "Patharghata Post Office"),
+    Post(thanaName = "Patharghata", postName = "Patharghata Model Post Office"),
+    Post(thanaName = "Patharghata", postName = "Patharghata Central Post Office"),
+
+    Post(thanaName = "Barishal Sadar", postName = "Barishal Sadar Post Office"),
+    Post(thanaName = "Barishal Sadar", postName = "Barishal Post Office"),
+    Post(thanaName = "Barishal Sadar", postName = "Barishal Railway Post Office"),
+
+    Post(thanaName = "Wazirpur", postName = "Wazirpur Post Office"),
+    Post(thanaName = "Wazirpur", postName = "Wazirpur Model Post Office"),
+    Post(thanaName = "Wazirpur", postName = "Wazirpur Central Post Office"),
+
+    Post(thanaName = "Banaripara", postName = "Banaripara Post Office"),
+    Post(thanaName = "Banaripara", postName = "Banaripara Model Post Office"),
+    Post(thanaName = "Banaripara", postName = "Banaripara Central Post Office"),
+
+    Post(thanaName = "Bhola Sadar", postName = "Bhola Sadar Post Office"),
+    Post(thanaName = "Bhola Sadar", postName = "Bhola Post Office"),
+    Post(thanaName = "Bhola Sadar", postName = "Bhola Railway Post Office"),
+
+    Post(thanaName = "Lalmohan", postName = "Lalmohan Post Office"),
+    Post(thanaName = "Lalmohan", postName = "Lalmohan Model Post Office"),
+    Post(thanaName = "Lalmohan", postName = "Lalmohan Central Post Office"),
+
+    Post(thanaName = "Tazumuddin", postName = "Tazumuddin Post Office"),
+    Post(thanaName = "Tazumuddin", postName = "Tazumuddin Model Post Office"),
+    Post(thanaName = "Tazumuddin", postName = "Tazumuddin Central Post Office"),
+
+    Post(thanaName = "Sunamganj Sadar", postName = "Sunamganj Sadar Post Office"),
+    Post(thanaName = "Sunamganj Sadar", postName = "Sunamganj Post Office"),
+    Post(thanaName = "Sunamganj Sadar", postName = "Sunamganj Railway Post Office"),
+
+    Post(thanaName = "Biswambharpur", postName = "Biswambharpur Post Office"),
+    Post(thanaName = "Biswambharpur", postName = "Biswambharpur Model Post Office"),
+    Post(thanaName = "Biswambharpur", postName = "Biswambharpur Central Post Office"),
+
+    Post(thanaName = "Jamaica", postName = "Jamaica Post Office"),
+    Post(thanaName = "Jamaica", postName = "Jamaica Model Post Office"),
+    Post(thanaName = "Jamaica", postName = "Jamaica Central Post Office"),
+
+    Post(thanaName = "Sylhet Sadar", postName = "Sylhet Sadar Post Office"),
+    Post(thanaName = "Sylhet Sadar", postName = "Sylhet Post Office"),
+    Post(thanaName = "Sylhet Sadar", postName = "Sylhet Railway Post Office"),
+
+    Post(thanaName = "Jaintiapur", postName = "Jaintiapur Post Office"),
+    Post(thanaName = "Jaintiapur", postName = "Jaintiapur Model Post Office"),
+    Post(thanaName = "Jaintiapur", postName = "Jaintiapur Central Post Office"),
+
+    Post(thanaName = "Companiganj", postName = "Companiganj Post Office"),
+    Post(thanaName = "Companiganj", postName = "Companiganj Model Post Office"),
+    Post(thanaName = "Companiganj", postName = "Companiganj Central Post Office"),
+
+    Post(thanaName = "Moulvibazar Sadar", postName = "Moulvibazar Sadar Post Office"),
+    Post(thanaName = "Moulvibazar Sadar", postName = "Moulvibazar Post Office"),
+    Post(thanaName = "Moulvibazar Sadar", postName = "Moulvibazar Railway Post Office"),
+
+    Post(thanaName = "Kamalganj", postName = "Kamalganj Post Office"),
+    Post(thanaName = "Kamalganj", postName = "Kamalganj Model Post Office"),
+    Post(thanaName = "Kamalganj", postName = "Kamalganj Central Post Office"),
+
+    Post(thanaName = "Rajnagar", postName = "Rajnagar Post Office"),
+    Post(thanaName = "Rajnagar", postName = "Rajnagar Model Post Office"),
+    Post(thanaName = "Rajnagar", postName = "Rajnagar Central Post Office"),
+
+    Post(thanaName = "Dinajpur Sadar", postName = "Dinajpur Sadar Post Office"),
+    Post(thanaName = "Dinajpur Sadar", postName = "Dinajpur Post Office"),
+    Post(thanaName = "Dinajpur Sadar", postName = "Dinajpur Railway Post Office"),
+
+    Post(thanaName = "Biral", postName = "Biral Post Office"),
+    Post(thanaName = "Biral", postName = "Biral Model Post Office"),
+    Post(thanaName = "Biral", postName = "Biral Central Post Office"),
+
+    Post(thanaName = "Kaharol", postName = "Kaharol Post Office"),
+    Post(thanaName = "Kaharol", postName = "Kaharol Model Post Office"),
+    Post(thanaName = "Kaharol", postName = "Kaharol Central Post Office"),
+
+    Post(thanaName = "Gaibandha Sadar", postName = "Gaibandha Sadar Post Office"),
+    Post(thanaName = "Gaibandha Sadar", postName = "Gaibandha Post Office"),
+    Post(thanaName = "Gaibandha Sadar", postName = "Gaibandha Railway Post Office"),
+
+    Post(thanaName = "Gobindaganj", postName = "Gobindaganj Post Office"),
+    Post(thanaName = "Gobindaganj", postName = "Gobindaganj Model Post Office"),
+    Post(thanaName = "Gobindaganj", postName = "Gobindaganj Central Post Office"),
+
+    Post(thanaName = "Sundarganj", postName = "Sundarganj Post Office"),
+    Post(thanaName = "Sundarganj", postName = "Sundarganj Model Post Office"),
+    Post(thanaName = "Sundarganj", postName = "Sundarganj Central Post Office"),
+
+    Post(thanaName = "Kurigram Sadar", postName = "Kurigram Sadar Post Office"),
+    Post(thanaName = "Kurigram Sadar", postName = "Kurigram Post Office"),
+    Post(thanaName = "Kurigram Sadar", postName = "Kurigram Railway Post Office"),
+
+    Post(thanaName = "Bhurgari", postName = "Bhurgari Post Office"),
+    Post(thanaName = "Bhurgari", postName = "Bhurgari Model Post Office"),
+    Post(thanaName = "Bhurgari", postName = "Bhurgari Central Post Office"),
+
+    Post(thanaName = "Nageshwari", postName = "Nageshwari Post Office"),
+    Post(thanaName = "Nageshwari", postName = "Nageshwari Model Post Office"),
+    Post(thanaName = "Nageshwari", postName = "Nageshwari Central Post Office"),
+
+    Post(thanaName = "Sherpur Sadar", postName = "Sherpur Sadar Post Office"),
+    Post(thanaName = "Sherpur Sadar", postName = "Sherpur Post Office"),
+    Post(thanaName = "Sherpur Sadar", postName = "Sherpur Railway Post Office"),
+
+    Post(thanaName = "Nakla", postName = "Nakla Post Office"),
+    Post(thanaName = "Nakla", postName = "Nakla Model Post Office"),
+    Post(thanaName = "Nakla", postName = "Nakla Central Post Office"),
+
+    Post(thanaName = "Jhenaigati", postName = "Jhenaigati Post Office"),
+    Post(thanaName = "Jhenaigati", postName = "Jhenaigati Model Post Office"),
+    Post(thanaName = "Jhenaigati", postName = "Jhenaigati Central Post Office"),
+
+    Post(thanaName = "Jamalpur Sadar", postName = "Jamalpur Sadar Post Office"),
+    Post(thanaName = "Jamalpur Sadar", postName = "Jamalpur Post Office"),
+    Post(thanaName = "Jamalpur Sadar", postName = "Jamalpur Railway Post Office"),
+
+    Post(thanaName = "Melandah", postName = "Melandah Post Office"),
+    Post(thanaName = "Melandah", postName = "Melandah Model Post Office"),
+    Post(thanaName = "Melandah", postName = "Melandah Central Post Office"),
+
+    Post(thanaName = "Islampur", postName = "Islampur Post Office"),
+    Post(thanaName = "Islampur", postName = "Islampur Model Post Office"),
+    Post(thanaName = "Islampur", postName = "Islampur Central Post Office"),
+
+    Post(thanaName = "Netrokona Sadar", postName = "Netrokona Sadar Post Office"),
+    Post(thanaName = "Netrokona Sadar", postName = "Netrokona Post Office"),
+    Post(thanaName = "Netrokona Sadar", postName = "Netrokona Railway Post Office"),
+
+    Post(thanaName = "Khaliajuri", postName = "Khaliajuri Post Office"),
+    Post(thanaName = "Khaliajuri", postName = "Khaliajuri Model Post Office"),
+    Post(thanaName = "Khaliajuri", postName = "Khaliajuri Central Post Office"),
+
+    Post(thanaName = "Barhatta", postName = "Barhatta Post Office"),
+    Post(thanaName = "Barhatta", postName = "Barhatta Model Post Office"),
+    Post(thanaName = "Barhatta", postName = "Barhatta Central Post Office"),
+)

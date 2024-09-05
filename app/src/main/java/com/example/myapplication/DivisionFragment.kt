@@ -27,6 +27,7 @@ class DivisionFragment : Fragment(), DivisionAdapter.OnItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val recyclerView: RecyclerView = binding.divisionRecyclerView
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
         divisionAdapter = DivisionAdapter(divisionList, this)
