@@ -35,5 +35,17 @@
         <argument
             android:name="data"
             app:argType="com.example.myapplication.District" />
+        <action
+            android:id="@+id/action_thanaFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.example.myapplication.PostFragment"
+        android:label="fragment_post_list"
+        tools:layout="@layout/fragment_post_list" >
+        <argument
+            android:name="data"
+            app:argType="com.example.myapplication.Thana" />
     </fragment>
 </navigation>

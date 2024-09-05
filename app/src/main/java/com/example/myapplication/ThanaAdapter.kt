@@ -27,6 +27,9 @@ class ThanaAdapter(
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         val thana = thanaList[position]
         viewHolder.binding.tvThanaName.text = thana.thanaName
+        viewHolder.itemView.setOnClickListener {
+            listener.onItemClick(thana)
+        }
 
     }
 

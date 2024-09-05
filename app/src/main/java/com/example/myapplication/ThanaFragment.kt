@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.myapplication.databinding.FragmentThanaListBinding
 
@@ -41,7 +42,9 @@ class ThanaFragment : Fragment(), ThanaAdapter.OnItemClickListener {
     }
 
     override fun onItemClick(thana: Thana) {
-        TODO("Not yet implemented")
+        val action = ThanaFragmentDirections.actionThanaFragmentToPostFragment(thana)
+        view?.findNavController()?.navigate(action)
+
     }
 
 
