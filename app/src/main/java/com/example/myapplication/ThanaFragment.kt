@@ -7,16 +7,18 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.myapplication.databinding.FragmentThanaListBinding
+import viewModel.ThanaViewModel
 
 
 class ThanaFragment : Fragment(), ThanaAdapter.OnItemClickListener {
     private lateinit var binding: FragmentThanaListBinding
     private lateinit var thanaAdapter: ThanaAdapter
     private val args: ThanaFragmentArgs by navArgs()
-
+    private val viewModel: ThanaViewModel by viewModels()
 
 
     override fun onCreateView(
@@ -30,12 +32,13 @@ class ThanaFragment : Fragment(), ThanaAdapter.OnItemClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val district = args.data
-        val thanaLists =
-            thanaList.filter { it.districtName == district.districtName } as ArrayList<Thana>
         val recyclerView: RecyclerView = binding.thanaRecyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        val thanaLists = viewModel.getThanas(district.districtName)
         thanaAdapter = ThanaAdapter(thanaLists, this)
         recyclerView.adapter = thanaAdapter
+
+
     }
 
     override fun onItemClick(thana: Thana) {

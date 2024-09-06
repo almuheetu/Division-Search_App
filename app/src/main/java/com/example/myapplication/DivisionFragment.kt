@@ -34,10 +34,10 @@ class DivisionFragment : Fragment(), DivisionAdapter.OnItemClickListener {
         val recyclerView: RecyclerView = binding.divisionRecyclerView
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
 
-        viewModel.divisions.observe(viewLifecycleOwner, Observer {
-            divisionAdapter = DivisionAdapter(it, this)
-            recyclerView.adapter = divisionAdapter
-        })
+        val divisions = viewModel.getDivisions()
+        divisionAdapter = DivisionAdapter(divisions, this)
+        recyclerView.adapter = divisionAdapter
+
     }
 
     override fun onItemClick(division: Division) {

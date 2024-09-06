@@ -32,23 +32,11 @@ class DistrictFragment : Fragment(), DistrictAdapter.OnItemClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val division = args.data
-        val districts =
-            districtList.filter { it.divisionName == division.divisionName } as ArrayList<District>
-
-//        for (item in districtList) {
-//            if (item.divisionName == division.divisionName) {
-//                districts.add(item)
-//            }
-//        }
-
         val recyclerView: RecyclerView = binding.districtRecyclerView
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
-
-        viewModel.districts.observe(viewLifecycleOwner, Observer {
-            districtAdapter = DistrictAdapter(districts, this)
-            recyclerView.adapter = districtAdapter
-        })
-
+        val districts = viewModel.getDistricts(division.divisionName)
+        districtAdapter = DistrictAdapter(districts, this)
+        recyclerView.adapter = districtAdapter
     }
 
     override fun onItemClick(district: District) {

@@ -7,13 +7,17 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import com.example.myapplication.databinding.FragmentPostListBinding
+import viewModel.PostViewModel
 
 class PostFragment : Fragment() {
     private lateinit var binding: FragmentPostListBinding
     private lateinit var postAdapter: PostAdapter
     private val args: PostFragmentArgs by navArgs()
+    private val viewModel: PostViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,11 +30,13 @@ class PostFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val thana = args.data
-        val postLists = postList.filter { it.thanaName == thana.thanaName } as ArrayList<Post>
+
         val recyclerView: RecyclerView = binding.postRecyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        postAdapter = PostAdapter(postLists)
+        val posts = viewModel.getPosts(thana.thanaName)
+        postAdapter = PostAdapter(posts)
         recyclerView.adapter = postAdapter
+
 
     }
 

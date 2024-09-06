@@ -7,9 +7,7 @@ import com.example.myapplication.District
 import com.example.myapplication.districtList
 
 class DistrictViewModel : ViewModel() {
-    private val _districts = MutableLiveData<ArrayList<District>>()
-    val districts: LiveData<ArrayList<District>> = _districts
-    init {
-        _districts.value = districtList
+    fun getDistricts(districName: String): ArrayList<District> {
+        return districtList.filter { it.divisionName == districName } as ArrayList<District>
     }
 }
