@@ -25,13 +25,10 @@ class PostAdapter(
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         val post = postList[position]
         viewHolder.binding.tvPostName.text = post.postName
-
     }
 
     override fun getItemCount(): Int {
         return postList.size
-
     }
-
 
 }

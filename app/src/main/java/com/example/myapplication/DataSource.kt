@@ -12,7 +12,6 @@ val divisionList = arrayListOf(
 
 )
 
-
 val districtList = arrayListOf(
     District(
         divisionName = "Dhaka",

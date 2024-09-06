@@ -7,13 +7,17 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentDivisionListBinding
+import viewModel.DivisionViewModel
 
 
 class DivisionFragment : Fragment(), DivisionAdapter.OnItemClickListener {
     private lateinit var binding: FragmentDivisionListBinding
     private lateinit var divisionAdapter: DivisionAdapter
+    private val viewModel: DivisionViewModel by viewModels()
 
 
     override fun onCreateView(
@@ -29,8 +33,18 @@ class DivisionFragment : Fragment(), DivisionAdapter.OnItemClickListener {
 
         val recyclerView: RecyclerView = binding.divisionRecyclerView
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
-        divisionAdapter = DivisionAdapter(divisionList, this)
-        recyclerView.adapter = divisionAdapter
+
+        viewModel.divisions.observe(viewLifecycleOwner, Observer {
+            divisionAdapter = DivisionAdapter(it, this)
+            recyclerView.adapter = divisionAdapter
+        })
+
+
+
+
+
+//        divisionAdapter = DivisionAdapter(divisionList, this)
+//        recyclerView.adapter = divisionAdapter
 
     }
 

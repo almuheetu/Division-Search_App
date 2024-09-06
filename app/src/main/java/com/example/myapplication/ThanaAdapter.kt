@@ -6,13 +6,14 @@ import android.view.ViewGroup
 import com.example.myapplication.databinding.AdapterThanaBinding
 
 class ThanaAdapter(
-    private val thanaList: ArrayList<Thana>, private val listener: OnItemClickListener
+    private val thanaList: ArrayList<Thana>,
+    private val listener: OnItemClickListener
 ) : RecyclerView.Adapter<ThanaAdapter.ViewHolder>() {
     class ViewHolder(val binding: AdapterThanaBinding) : RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val binding = AdapterThanaBinding.inflate(
-            LayoutInflater.from(parent.context), parent, false
+            LayoutInflater.from(viewGroup.context), viewGroup, false
         )
         return ViewHolder(binding)
     }
@@ -23,12 +24,10 @@ class ThanaAdapter(
         viewHolder.itemView.setOnClickListener {
             listener.onItemClick(thana)
         }
-
     }
 
     override fun getItemCount(): Int {
         return thanaList.size
-
     }
 
     interface OnItemClickListener {

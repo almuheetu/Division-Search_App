@@ -32,6 +32,7 @@ class DistrictAdapter(
             .into(viewHolder.binding.districtImage)
 
         viewHolder.binding.tvEmployeeDistrictName.text = district.districtName
+
         viewHolder.itemView.setOnClickListener {
             listener.onItemClick(district)
         }
