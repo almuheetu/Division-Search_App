@@ -18,6 +18,7 @@ class ThanaFragment : Fragment(), ThanaAdapter.OnItemClickListener {
     private val args: ThanaFragmentArgs by navArgs()
 
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

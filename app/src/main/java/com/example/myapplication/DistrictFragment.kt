@@ -6,16 +6,20 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.myapplication.databinding.FragmentDistrictListBinding
+import viewModel.DistrictViewModel
 
 
 class DistrictFragment : Fragment(), DistrictAdapter.OnItemClickListener {
     private lateinit var binding: FragmentDistrictListBinding
     private lateinit var districtAdapter: DistrictAdapter
     private val args: DistrictFragmentArgs by navArgs()
+    private val viewModel: DistrictViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,7 +32,8 @@ class DistrictFragment : Fragment(), DistrictAdapter.OnItemClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val division = args.data
-        val districts = districtList.filter { it.divisionName == division.divisionName } as ArrayList<District>
+        val districts =
+            districtList.filter { it.divisionName == division.divisionName } as ArrayList<District>
 
 //        for (item in districtList) {
 //            if (item.divisionName == division.divisionName) {
@@ -38,8 +43,12 @@ class DistrictFragment : Fragment(), DistrictAdapter.OnItemClickListener {
 
         val recyclerView: RecyclerView = binding.districtRecyclerView
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
-        districtAdapter = DistrictAdapter(districts, this)
-        recyclerView.adapter = districtAdapter
+
+        viewModel.districts.observe(viewLifecycleOwner, Observer {
+            districtAdapter = DistrictAdapter(districts, this)
+            recyclerView.adapter = districtAdapter
+        })
+
     }
 
     override fun onItemClick(district: District) {

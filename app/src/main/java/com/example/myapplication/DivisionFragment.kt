@@ -38,14 +38,6 @@ class DivisionFragment : Fragment(), DivisionAdapter.OnItemClickListener {
             divisionAdapter = DivisionAdapter(it, this)
             recyclerView.adapter = divisionAdapter
         })
-
-
-
-
-
-//        divisionAdapter = DivisionAdapter(divisionList, this)
-//        recyclerView.adapter = divisionAdapter
-
     }
 
     override fun onItemClick(division: Division) {
