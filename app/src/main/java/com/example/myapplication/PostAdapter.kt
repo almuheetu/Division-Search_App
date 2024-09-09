@@ -30,5 +30,4 @@ class PostAdapter(
     override fun getItemCount(): Int {
         return postList.size
     }
-
 }

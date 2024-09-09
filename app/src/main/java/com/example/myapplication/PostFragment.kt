@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import com.example.myapplication.databinding.FragmentPostListBinding
 import viewModel.PostViewModel
@@ -30,7 +29,6 @@ class PostFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val thana = args.data
-
         val recyclerView: RecyclerView = binding.postRecyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         val posts = viewModel.getPosts(thana.thanaName)

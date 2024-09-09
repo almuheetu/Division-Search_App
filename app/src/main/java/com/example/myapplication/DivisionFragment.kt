@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentDivisionListBinding
 import viewModel.DivisionViewModel
@@ -34,9 +33,13 @@ class DivisionFragment : Fragment(), DivisionAdapter.OnItemClickListener {
         val recyclerView: RecyclerView = binding.divisionRecyclerView
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
 
-        val divisions = viewModel.getDivisions()
-        divisionAdapter = DivisionAdapter(divisions, this)
-        recyclerView.adapter = divisionAdapter
+        viewModel.divisions.observe(viewLifecycleOwner) { divisions ->
+            divisionAdapter = DivisionAdapter(divisions as ArrayList<Division>, this)
+            recyclerView.adapter = divisionAdapter
+        }
+
+//        divisionAdapter = DivisionAdapter(divisions, this)
+//        recyclerView.adapter = divisionAdapter
 
     }
 
