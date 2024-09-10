@@ -33,10 +33,12 @@ class DivisionFragment : Fragment(), DivisionAdapter.OnItemClickListener {
 
         val recyclerView: RecyclerView = binding.divisionRecyclerView
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
-
+        viewModel.getItems()
         viewModel.division.observe(viewLifecycleOwner, Observer { divisions ->
             divisionAdapter = DivisionAdapter(divisions, this)
             recyclerView.adapter = divisionAdapter
+            binding.loadingId.root.visibility = View.GONE
+            binding.divisionRecyclerView.visibility = View.VISIBLE
         })
     }
 

@@ -31,10 +31,14 @@ class PostFragment : Fragment() {
         val thana = args.data
         val recyclerView: RecyclerView = binding.postRecyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        viewModel.getPosts()
         viewModel.posts.observe(viewLifecycleOwner) {
             val posts = postList.filter { it.thanaName == thana.thanaName } as ArrayList<Post>
             postAdapter = PostAdapter(posts)
             recyclerView.adapter = postAdapter
+            binding.postLoadingId.root.visibility = View.GONE
+            binding.postRecyclerView.visibility = View.VISIBLE
+
         }
     }
 

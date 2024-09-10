@@ -33,11 +33,14 @@ class DistrictFragment : Fragment(), DistrictAdapter.OnItemClickListener {
         val division = args.data
         val recyclerView: RecyclerView = binding.districtRecyclerView
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
+        viewModel.getDistricts()
         viewModel.districts.observe(viewLifecycleOwner) {
             val districts =
                 districtList.filter { it.divisionName == division.divisionName } as ArrayList<District>
             districtAdapter = DistrictAdapter(districts, this)
             recyclerView.adapter = districtAdapter
+            binding.districtLoadingId.root.visibility = View.GONE
+            binding.districtRecyclerView.visibility = View.VISIBLE
         }
     }
 

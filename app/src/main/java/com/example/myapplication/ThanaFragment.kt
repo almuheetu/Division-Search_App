@@ -33,11 +33,14 @@ class ThanaFragment : Fragment(), ThanaAdapter.OnItemClickListener {
         val district = args.data
         val recyclerView: RecyclerView = binding.thanaRecyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        viewModel.getThana()
         viewModel.thanas.observe(viewLifecycleOwner) {
             val thanaLists =
                 thanaList.filter { it.districtName == district.districtName } as ArrayList<Thana>
             thanaAdapter = ThanaAdapter(thanaLists, this)
             recyclerView.adapter = thanaAdapter
+            binding.thanaLoadingId.root.visibility = View.GONE
+            binding.thanaRecyclerView.visibility = View.VISIBLE
         }
     }
 
