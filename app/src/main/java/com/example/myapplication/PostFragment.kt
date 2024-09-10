@@ -36,11 +36,6 @@ class PostFragment : Fragment() {
             postAdapter = PostAdapter(posts)
             recyclerView.adapter = postAdapter
         }
-//        val posts = viewModel.getPosts(thana.thanaName)
-//        postAdapter = PostAdapter(posts)
-//        recyclerView.adapter = postAdapter
-
-
     }
 
 }
