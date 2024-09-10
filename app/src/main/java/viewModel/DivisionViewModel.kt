@@ -7,8 +7,8 @@ import com.example.myapplication.Division
 import com.example.myapplication.divisionList
 
 class DivisionViewModel : ViewModel() {
-    private val _divisions = MutableLiveData<List<Division>>()
-    val divisions: LiveData<List<Division>> = _divisions
+    private val _divisions = MutableLiveData<ArrayList<Division>>()
+    val division: LiveData<ArrayList<Division>> get() = _divisions
 
     init {
         _divisions.value = divisionList

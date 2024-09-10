@@ -33,9 +33,12 @@ class DistrictFragment : Fragment(), DistrictAdapter.OnItemClickListener {
         val division = args.data
         val recyclerView: RecyclerView = binding.districtRecyclerView
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
-        val districts = viewModel.getDistricts(division.divisionName)
-        districtAdapter = DistrictAdapter(districts, this)
-        recyclerView.adapter = districtAdapter
+        viewModel.districts.observe(viewLifecycleOwner) {
+            val districts =
+                districtList.filter { it.divisionName == division.divisionName } as ArrayList<District>
+            districtAdapter = DistrictAdapter(districts, this)
+            recyclerView.adapter = districtAdapter
+        }
     }
 
     override fun onItemClick(district: District) {
